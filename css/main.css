@@ -1,0 +1,300 @@
+/*white #c9c1ac*/
+/*red color #d3325f*/
+/*black #242424*/
+.info{
+	background: #c9c1ac;
+
+}
+
+
+body{
+	color: #c9c1ac;
+	font-family: 'Courgette', cursive;
+	background: url(../img/back.jpeg)center/cover fixed no-repeat;
+	}
+
+.primary-color{
+	color: #d3325f;/*text color*/
+}
+
+.info h2{
+	word-spacing:0.4rem;/*rem is used to make website responcive*/
+}
+ 
+ /*icons prorety*/
+ .info a{
+ 	transition: color 2s ease-in-out;/*start slow and end slow*/
+ }
+.info a:hover{
+	color: #242424;/*change the color of the icon as we click on it*/
+}
+
+/*##############header###########*/
+
+#header{
+	min-height: 100vh;
+	background:linear-gradient(to right,rgba(0,0,0,0.5),rgba(0,0,0,0.5))/*used to change the opacity of backgroung*/
+	,url(../img/food.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;/*img is fixed but text moves*/
+	background-repeat: no-repeat;
+	position: relative;
+
+}
+.height-90{
+	min-height: 100vh;
+	}
+
+.banner h1{
+	border-top: 4px dotted #c9c1ac;
+	border-bottom:  4px dotted #c9c1ac;
+	animation: fromLeft;
+	animation-duration: 4s;
+	animation-delay: 2s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes fromLeft{
+	0%{
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	50%{
+		transform: translateX(30px);
+	}
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+}
+
+
+.main-btn{
+	color: #d3325f;
+	font-size: 1rem;
+	border:1px solid #d3325f;
+	transition: all 1s ease-in-out;
+
+}
+.main-btn:hover{
+	color: #242424;
+	border: 1px solid #c9c1ac;
+	background: #c9c1ac; 
+}
+
+.galli-btn{
+	animation: fromRight;
+	animation-duration: 3s;
+	animation-delay: 2s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+
+}
+
+
+
+
+
+@keyframes fromRight{
+	0%{
+		transform: translateX(100px);
+		opacity: 0;
+	}
+	50%{
+		transform: translateX(30px);
+	}
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+}
+
+
+.header-link{
+	display: inline-block;
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	background: #c9c1ac;
+	border-radius: 10px;
+	transition: all 2s ease;
+	animation: fromBottom;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+.header-link:hover{
+	color: #242424;
+}
+
+@keyframes fromBottom{
+	0%{
+		transform: translateY(-10px);
+
+	}
+	50%{
+		transform: translateY(10px);
+	}
+	100%{
+		transform: translateY(-10px);
+	}
+}
+
+
+/*menu item*/
+.item-container{
+	position: relative;
+	/*for link*/
+	overflow: hidden;
+	background: linear-gradient(rgb(0,0,0),rgb(0,0,0));
+	transition: all 2s ease;
+
+}
+.item-img{
+	transition: all 2s ease;
+}
+.item-container:hover.item-img{
+	transform: scale(1.2);
+	opacity: 0.5;
+}
+
+.item-link{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	color: #d3325f;
+	font-size: 2rem;
+	border-top: 3px solid #d3325f;
+	border-bottom:  3px solid #d3325f;
+	transition: all 2s ease;
+	opacity: 0;
+}
+.item-container:hover.item-link{
+	opacity: 1;
+}
+.item-link:hover{
+	color: #c9c1ac;
+	border: 3px solid #c9c1ac;
+	background: #c9c1ac;
+	color: #242424;
+}
+.item-container:hover{
+	outline: 10px solid #d3325f;
+	outline-offset: 0.8rem;
+}
+
+/****menu items*/
+#menu{
+	background:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url(../img/food.jpeg)center/cover fixed  no-repeat;
+
+}
+/*.special{
+	border:2px solid #d3325f;
+	position: relative;
+}
+.special-text{
+	position: absolute;
+	top:0;
+	right: 90%;
+	background: #d3325f;
+	padding: 0,0;
+}*/
+
+
+/*about*/
+.about-pictures{
+	position: relative;
+}
+.about-image{
+	position: absolute;
+	width: 200px;
+	transition: all 2s ease;
+	opacity: 0.9;
+
+}
+.img-1{
+	left:0%;
+	top: 0%;
+
+}
+.img-2{
+	left:20%;
+	top:20%;
+	z-index: 10;
+
+}
+.img-3{
+	left:40%;
+	top:45%;
+	z-index: 20;
+	
+}
+.img-4{
+	left:40%;
+	top:0%;
+	
+	
+}
+.img-5{
+	left:0%;
+	top:45%;
+	
+}
+.about-image:hover{
+	outline: 8px solid #d3325f;
+	outline-offset: 0.8rems;
+	transform: scale(1.3) rotate(20deg);
+	z-index: 30;
+	opacity: 1;
+}
+.about-picture:hover .about-image:not(:hover){
+	opacity: 0.5;
+}
+
+/***********reviw**********/
+.review-img{
+		width: 10px;
+}
+
+/********contact****/
+.height-60{
+	min-height: 60vh;
+}
+
+#contact.card{
+	background: rgba(0,0,0,0.5);
+	transition: all 2s ease;
+}
+#contact.card:hover{
+	background: rgba(0,0,0,0.8);
+}
+#contact.card-header{
+	color: #d3325f;
+}
+#contact.input-group-text{
+	background: #d3325f;
+	border-color: #d3325f;
+	color: #242424;
+}
+#contact .card-input{
+	color: #606060;
+}
+#contact .card-input::placeholder{
+	color: #606060;
+}
+.contact-btn{
+	color: #d3325f;
+	border-color: #d3325f;
+	background: transparent;
+	transition: all 2s ease-in-out;
+}
+.contact-btn:hover{
+	background: #c9c1ac;
+	color: #d3325f;
+	border-color: #c9c1ac;
+}
